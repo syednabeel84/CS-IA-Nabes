@@ -1,48 +1,4 @@
 const express = require('express');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const http = require('http');
 const app = express();
 const server = http.createServer(app);
@@ -808,16 +764,6 @@ app.post('/AdminLogin', async (req, res) => {
 
 
 // //Server live realod for updating HTML and CSS files in browser, only for development session
-
-const livereload = require('livereload');
-const { response } = require('express');
-const { ALL } = require('dns');
-var lrserver = livereload.createServer({
-    exts: ['js', 'css', 'hbs', 'html', 'svg']
-});
-lrserver.watch(partialsPath);
-lrserver.watch(templatePath);
-lrserver.watch(publicPath);
 
 server.listen(port, () => {
     console.log(`Server is Up and Running at port:`, port)
